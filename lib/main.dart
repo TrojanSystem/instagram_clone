@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/screens/insta_splash_screen.dart';
+import 'package:instagram_clone/screens/insta_homePage.dart';
+
 
 void main() {
   runApp(const InstaClone());
@@ -11,13 +12,13 @@ class InstaClone extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp(debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
 
         primarySwatch: Colors.blue,
       ),
-      home: const InstaSplash(),
+      home:  const InstaHomePage(),
     );
   }
 }
