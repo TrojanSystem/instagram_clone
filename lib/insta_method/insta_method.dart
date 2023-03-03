@@ -96,6 +96,54 @@ Widget buildStoryListProfile() {
   );
 }
 
+Widget currentProfileWithBorder({profileWidth,profileHeight}) {
+  return Container(
+    margin: const EdgeInsets.only(left: 1),
+    width: profileWidth,
+    height: profileHeight,
+    decoration: BoxDecoration(
+        border: Border.all(width: 3, color: Colors.white),
+        shape: BoxShape.circle),
+    child: Container(
+      width: profileWidth,
+      height: profileHeight,
+      decoration: const BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage('assets/images/p2.jpg'),
+          ),
+          shape: BoxShape.circle),
+    ),
+  );
+}
+
+Widget buildProfileScreenHeaderIcons(
+    {required BuildContext iconContext,
+      required VoidCallback iconFunction,
+      required IconData icon,
+      required double size}) {
+  return IconButton(
+    onPressed: iconFunction,
+    icon: Icon(
+      icon,
+      color: Colors.white,
+      size: size,
+    ),
+  );
+}
+Widget currentProfileWithOutBorder({profileWidth,profileHeight}) {
+  return Container(
+    margin: const EdgeInsets.only(left: 1),
+    width: profileWidth,
+    height: profileHeight,
+    decoration: const BoxDecoration(
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage('assets/images/p2.jpg'),
+        ),
+        shape: BoxShape.circle),
+  );
+}
 Widget buildStoryList({storyImage, storyTitle,width,height}) {
   return Column(
     children: [

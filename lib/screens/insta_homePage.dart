@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/screens/insta_splash_screen.dart';
 
+import '../insta_method/insta_method.dart';
 import 'insta_post_screen.dart';
 import 'insta_profile_screen.dart';
 import 'insta_reel_screen.dart';
@@ -33,7 +34,7 @@ class _InstaHomePageState extends State<InstaHomePage> {
     {
       'screen': const InstaSearchScreen(),
       "unselectedIcon": const Icon(
-        Icons.search,
+        Icons.search_outlined,
         color: Colors.white,
         size: 35,
       ),
@@ -71,35 +72,10 @@ class _InstaHomePageState extends State<InstaHomePage> {
     },
     {
       'screen': const InstaProfileScreen(),
-      'unselectedIcon': Container(
-        margin: const EdgeInsets.only(left: 1),
-        width: 50,
-        height: 50,
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage('assets/images/p2.jpg'),
-            ),
-            shape: BoxShape.circle),
-      ),
-      'selectedIcon': Container(
-        margin: const EdgeInsets.only(left: 1),
-        width: 50,
-        height: 50,
-        decoration: BoxDecoration(
-            border: Border.all(width: 3, color: Colors.white),
-            shape: BoxShape.circle),
-        child: Container(
-          width: 50,
-          height: 50,
-          decoration: const BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage('assets/images/p2.jpg'),
-              ),
-              shape: BoxShape.circle),
-        ),
-      ),
+      'unselectedIcon':
+          currentProfileWithOutBorder(profileHeight: 50.0, profileWidth: 50.0),
+      'selectedIcon':
+          currentProfileWithBorder(profileWidth: 50.0, profileHeight: 50.0),
     }
   ];
 
