@@ -15,6 +15,13 @@ class InstaSplash extends StatelessWidget {
     {'name': 'sisoco', 'images': 'assets/images/p3.jpg'},
     {'name': 'eskibidi', 'images': 'assets/images/p4.jpg'},
   ];
+  List color = [
+    Colors.red,
+    Colors.green,
+    Colors.blue,
+    Colors.purple,
+    Colors.yellow
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -64,12 +71,18 @@ class InstaSplash extends StatelessWidget {
                 children: [
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.63,
-                    child: ListView(
-                      children: const [
-                        MainBodyHeader(),
-                        MainBody(),
-                        MainBodyFooter(),
-                      ],
+                    child: ListView.builder(
+                      itemCount: 5,
+                      itemBuilder: (context, index) => SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.70,
+                        child: Column(
+                          children: const [
+                            MainBodyHeader(),
+                            MainBody(),
+                            MainBodyFooter(),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -81,5 +94,3 @@ class InstaSplash extends StatelessWidget {
     );
   }
 }
-
-

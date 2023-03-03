@@ -60,7 +60,7 @@ class MainBodyFooter extends StatelessWidget {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.fromLTRB(0,8,8,8.0),
+              padding: EdgeInsets.fromLTRB(0,8,8,0),
               child: Text(
                 '12,456 Likes',
                 style: TextStyle(
