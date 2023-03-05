@@ -52,28 +52,32 @@ class InstaReelScreen extends StatelessWidget {
               rightPad: 20,
               bottomPad: MediaQuery.of(context).size.height * 0.05,
             ),
-            Positioned(
-              left: 10,
-              bottom: 5,
-              child: Row(
-                children: const [
-                  Icon(
-                    Icons.bar_chart,
-                    color: Colors.white,
-                    size: 30,
-                  ),
-                  Text(
-                    'creativeflowss. Original audio',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
-                ],
-              ),
-            ),
+            buildReelCurrentMusic(),
             buildReelCurrentVideoDescription(context)
           ],
         ),
       ),
     );
+  }
+
+  Positioned buildReelCurrentMusic() {
+    return Positioned(
+            left: 10,
+            bottom: 10,
+            child: Row(
+              children: const [
+                Icon(
+                  Icons.bar_chart,
+                  color: Colors.white,
+                  size: 30,
+                ),
+                Text(
+                  'creativeflowss. Original audio',
+                  style: TextStyle(color: Colors.white, fontSize: 18),
+                ),
+              ],
+            ),
+          );
   }
 
   Widget buildReelCurrentVideoDescription(BuildContext context) {
