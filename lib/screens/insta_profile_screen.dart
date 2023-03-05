@@ -90,8 +90,8 @@ class InstaProfileScreen extends StatelessWidget {
                           },
                           body: TabBarView(
                             children: [
-                              buidImages(),
-                              buidImages(),
+                              buildImages(),
+                              buildImages(),
                             ],
                           ),
                         ),
@@ -126,7 +126,7 @@ class InstaProfileScreen extends StatelessWidget {
     );
   }
 
-  Widget buidImages() => GridView.builder(
+  Widget buildImages() => GridView.builder(
       gridDelegate:
           const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
       itemCount: 20,
