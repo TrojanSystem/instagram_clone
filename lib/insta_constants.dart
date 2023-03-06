@@ -9,15 +9,15 @@ const kkInstaLogo = TextStyle(
 const kkCurrentProfileUserName = TextStyle(
   color: Colors.white,
   fontWeight: FontWeight.w800,
-  fontSize: 25,
+  fontSize: 20,
 );
 const kkProfileData = TextStyle(
   fontWeight: FontWeight.bold,
   color: Colors.white,
-  fontSize: 25,
+  fontSize: 20,
 );
 const kkProfileDataTitle = TextStyle(
   fontWeight: FontWeight.bold,
   color: Colors.white60,
-  fontSize: 18,
+  fontSize: 15,
 );

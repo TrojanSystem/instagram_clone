@@ -38,28 +38,28 @@ class InstaSplash extends StatelessWidget {
                 children: [
                   buildStoryListProfile(),
                   buildStoryList(
-                      width: 90.0,
-                      height: 90.0,
+                      width: 80.0,
+                      height: 80.0,
                       storyImage: storyList[0]['images'],
                       storyTitle: storyList[0]['name']),
                   buildStoryList(
-                      width: 90.0,
-                      height: 90.0,
+                      width: 80.0,
+                      height: 80.0,
                       storyImage: storyList[1]['images'],
                       storyTitle: storyList[1]['name']),
                   buildStoryList(
-                      width: 90.0,
-                      height: 90.0,
+                      width: 80.0,
+                      height: 80.0,
                       storyImage: storyList[2]['images'],
                       storyTitle: storyList[2]['name']),
                   buildStoryList(
-                      width: 90.0,
-                      height: 90.0,
+                      width: 80.0,
+                      height: 80.0,
                       storyImage: storyList[3]['images'],
                       storyTitle: storyList[3]['name']),
                   buildStoryList(
-                      width: 90.0,
-                      height: 90.0,
+                      width: 80.0,
+                      height: 80.0,
                       storyImage: storyList[4]['images'],
                       storyTitle: storyList[4]['name']),
                 ],
@@ -74,7 +74,7 @@ class InstaSplash extends StatelessWidget {
                     child: ListView.builder(
                       itemCount: 5,
                       itemBuilder: (context, index) => SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.70,
+                        height: MediaQuery.of(context).size.height * 0.78,
                         child: Column(
                           children: const [
                             MainBodyHeader(),

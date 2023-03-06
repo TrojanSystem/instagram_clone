@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/screens/insta_homePage.dart';
+import 'package:instagram_clone/widget_tester.dart';
 
 
 void main() {

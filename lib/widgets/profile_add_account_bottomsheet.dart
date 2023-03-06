@@ -26,11 +26,11 @@ class ProfileAddAccountBottomSheet extends StatelessWidget {
           Row(
             children: const [
               Padding(
-                padding: EdgeInsets.fromLTRB(18.0, 8, 18, 8),
+                padding: EdgeInsets.fromLTRB(38.0, 8, 18, 8),
                 child: Icon(
                   Icons.add_circle_outline,
                   fill: 0.5,
-                  size: 80,
+                  size: 50,
                   color: Colors.white,
                 ),
               ),
@@ -51,7 +51,7 @@ class ProfileAddAccountBottomSheet extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.fromLTRB(18.0, 8, 18, 8),
           child: currentProfileWithOutBorder(
-              profileHeight: 80.0, profileWidth: 80.0),
+              profileHeight: 70.0, profileWidth: 70.0),
         ),
         const Text(
           'Ceng_sura',

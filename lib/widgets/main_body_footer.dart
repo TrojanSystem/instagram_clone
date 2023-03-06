@@ -15,7 +15,7 @@ class MainBodyFooter extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
+              padding: const EdgeInsets.only(bottom: 4.0),
               child: Row(
                 mainAxisAlignment:
                 MainAxisAlignment.spaceBetween,
@@ -27,7 +27,7 @@ class MainBodyFooter extends StatelessWidget {
                         icon: const Icon(
                           MdiIcons.heartOutline,
                           color: Colors.white,
-                          size: 35,
+                          size: 25,
                         ),
                       ),
                       IconButton(
@@ -35,7 +35,7 @@ class MainBodyFooter extends StatelessWidget {
                         icon: const Icon(
                           MdiIcons.chatOutline,
                           color: Colors.white,
-                          size: 35,
+                          size: 25,
                         ),
                       ),
                       IconButton(
@@ -43,7 +43,7 @@ class MainBodyFooter extends StatelessWidget {
                         icon: const Icon(
                           MdiIcons.send,
                           color: Colors.white,
-                          size: 35,
+                          size: 25,
                         ),
                       ),
                     ],
@@ -53,14 +53,14 @@ class MainBodyFooter extends StatelessWidget {
                     icon: const Icon(
                       MdiIcons.bookmarkOutline,
                       color: Colors.white,
-                      size: 35,
+                      size: 25,
                     ),
                   ),
                 ],
               ),
             ),
             const Padding(
-              padding: EdgeInsets.fromLTRB(0,8,8,0),
+              padding: EdgeInsets.fromLTRB(0,2,8,0),
               child: Text(
                 '12,456 Likes',
                 style: TextStyle(

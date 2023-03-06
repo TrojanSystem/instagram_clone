@@ -1,5 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:instagram_clone/screens/insta_splash_screen.dart';
+import 'package:video_player/video_player.dart';
 
 import '../insta_method/insta_method.dart';
 import 'insta_post_screen.dart';
@@ -16,6 +21,29 @@ class InstaHomePage extends StatefulWidget {
 
 class _InstaHomePageState extends State<InstaHomePage> {
   int screenIndex = 0;
+  late VideoPlayerController _controller;
+  File? image;
+
+  Future pickImage() async {
+    try {
+      final image = await ImagePicker().pickVideo(source: ImageSource.camera);
+      if (image == null) return;
+      final imageTemp = File(image.path);
+      setState(() => this.image = imageTemp);
+      _controller = VideoPlayerController.file(imageTemp)
+        ..initialize().then((_) {
+          setState(() {});
+          _controller.play();
+        });
+    } on PlatformException catch (e) {
+      print('Failed to pick image: $e');
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   List screenPage = [
     {
@@ -45,7 +73,7 @@ class _InstaHomePageState extends State<InstaHomePage> {
       )
     },
     {
-      'screen': const InstaPostScreen(),
+      'screen': InstaPostScreen(),
       "unselectedIcon": const Icon(
         Icons.add_box_outlined,
         color: Colors.white,
@@ -92,18 +120,24 @@ class _InstaHomePageState extends State<InstaHomePage> {
             scrollDirection: Axis.horizontal,
             physics: const NeverScrollableScrollPhysics(),
             itemCount: screenPage.length,
-            itemBuilder: (context, index) => GestureDetector(
-              onTap: () {
-                setState(() {
-                  screenIndex = index;
-                });
-              },
-              child: Container(
-                margin: const EdgeInsets.only(left: 20, right: 20),
-                child: screenIndex == index
-                    ? screenPage[index]['selectedIcon']
-                    : screenPage[index]['unselectedIcon'],
-              ),
+            itemBuilder: (context, index) => Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      screenIndex = index;
+                    });
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(
+                        left: MediaQuery.of(context).size.width * 0.05,
+                        right: MediaQuery.of(context).size.width * 0.05),
+                    child: screenIndex == index
+                        ? screenPage[index]['selectedIcon']
+                        : screenPage[index]['unselectedIcon'],
+                  ),
+                ),
+              ],
             ),
           ),
         ),
