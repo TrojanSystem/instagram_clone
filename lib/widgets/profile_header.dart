@@ -46,7 +46,7 @@ class ProfileHeader extends StatelessWidget {
                   iconContext: context,
                   icon: Icons.add_box_outlined,
                   size: 35,
-                  iconFunction: () {},
+                  iconFunction: pickImage,
                 ),
                 buildProfileScreenHeaderIcons(
                   iconContext: context,

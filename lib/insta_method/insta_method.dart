@@ -1,4 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../insta_constants.dart';
@@ -221,7 +225,30 @@ Widget buildProfileData({required data, required title,context}) {
     ),
   );
 }
+File? image;
+File? postImage;
+Future pickPostImage() async {
+  try {
+    final postImage = await ImagePicker().pickVideo(source: ImageSource.camera);
+    if (postImage == null) return;
+    final postImageTemp = File(postImage.path);
 
+
+  } on PlatformException catch (e) {
+    print('Failed to pick image: $e');
+  }
+}
+Future pickImage() async {
+  try {
+    final image = await ImagePicker().pickVideo(source: ImageSource.camera);
+    if (image == null) return;
+    final imageTemp = File(image.path);
+
+
+  } on PlatformException catch (e) {
+    print('Failed to pick image: $e');
+  }
+}
 Widget buildImages() => GridView.builder(
     gridDelegate:
     const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),

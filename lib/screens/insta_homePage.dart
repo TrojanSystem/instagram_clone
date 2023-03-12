@@ -47,6 +47,7 @@ class _InstaHomePageState extends State<InstaHomePage> {
 
   List screenPage = [
     {
+
       'screen': InstaSplash(),
       "unselectedIcon": const Icon(
         Icons.home_outlined,
@@ -73,7 +74,7 @@ class _InstaHomePageState extends State<InstaHomePage> {
       )
     },
     {
-      'screen': const InstaPostScreen(),
+      'screen':  const InstaPostScreen(),
       "unselectedIcon": const Icon(
         Icons.add_box_outlined,
         color: Colors.white,
@@ -86,6 +87,7 @@ class _InstaHomePageState extends State<InstaHomePage> {
       )
     },
     {
+
       'screen': const InstaReelScreen(),
       "unselectedIcon": const Icon(
         Icons.video_call_outlined,
@@ -126,6 +128,9 @@ class _InstaHomePageState extends State<InstaHomePage> {
                   onTap: () {
                     setState(() {
                       screenIndex = index;
+                      // if(index == 2){
+                      //  pickImage();
+                      // }
                     });
                   },
                   child: Container(
