@@ -227,7 +227,7 @@ Widget buildImages() => GridView.builder(
     const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
     itemCount: 20,
     itemBuilder: (context, index) => Container(
-      margin: EdgeInsets.all(4),
+      margin: const EdgeInsets.all(4),
       width: 100,
       height: 100,
       decoration: const BoxDecoration(

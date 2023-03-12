@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../insta_constants.dart';
-import '../insta_method/insta_method.dart';
 import '../widgets/profile_header.dart';
 import '../widgets/profile_header_body_section.dart';
 import '../widgets/profile_posted_section.dart';
@@ -38,8 +36,8 @@ class InstaProfileScreen extends StatelessWidget {
                         deviceWidth: deviceWidth, deviceHeight: deviceHeight),
                     const ProfilePostedSection(),
                     Container(
-                      color: Colors.green,
-                      height: 100,
+                      color: Colors.black,
+                      height: 82,
                     ),
                   ],
                 ),

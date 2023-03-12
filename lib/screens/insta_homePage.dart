@@ -73,7 +73,7 @@ class _InstaHomePageState extends State<InstaHomePage> {
       )
     },
     {
-      'screen': InstaPostScreen(),
+      'screen': const InstaPostScreen(),
       "unselectedIcon": const Icon(
         Icons.add_box_outlined,
         color: Colors.white,
