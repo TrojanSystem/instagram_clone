@@ -100,6 +100,8 @@ int screenIndex = 0;
                         screenIndex = index;
                         if(screenIndex == 1 || screenIndex==2||screenIndex==3){
                           pickImage();
+                        }else{
+                          pickPostImage();
                         }
                       });
                     },

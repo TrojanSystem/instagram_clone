@@ -229,7 +229,7 @@ File? image;
 File? postImage;
 Future pickPostImage() async {
   try {
-    final postImage = await ImagePicker().pickVideo(source: ImageSource.camera);
+    final postImage = await ImagePicker().pickImage(source: ImageSource.gallery);
     if (postImage == null) return;
     final postImageTemp = File(postImage.path);
 
